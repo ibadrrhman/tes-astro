@@ -1,0 +1,48 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        <nav>
+            <p>Navigasi menu</p>
+            <ul style="display: flex; gap: 20px;">
+                <li><a href="/" Home>Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/works">Work</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+		<slot />
+        <footer>
+            <p>Footer space</p>
+        </footer>
+	</body>
+</html>
+
+
+<style>
+    nav {
+        background-color: black;
+        color: white;
+        height: 80px;
+    }
+
+    footer {
+        background-color: blue;
+        color: yellow;
+        height: 300px;
+    }
+</style>
+
+<script>
+    const navbar = document.querySelector("nav");
+    navbar.addEventListener("click", () => alert("Navbar diklik"));
+</script>
